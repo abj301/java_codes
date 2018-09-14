@@ -17,7 +17,7 @@ public class WordCount {
 			
 			while(scan.hasNext()) {
 			
-				String next=scan.next().toLowerCase();
+				String next=scan.next();
 				
 				if(!hm.containsKey(next)) {
 					hm.put(next,1);
@@ -33,6 +33,7 @@ public class WordCount {
 		
 		System.out.println("total words" + hm.size());
 		for (String  words : hm.keySet()) {
+			
 			int count=hm.get(words);
 			System.out.println(count +"\t"+ words);
 		}
