@@ -10,20 +10,21 @@ public class WordCount {
 	static int count=0;
 	
 	public static void count(File f) {
-		HashMap<String,Integer> hm =new HashMap<String,Integer> ();
+		HashMap<String,Integer> hm =new HashMap<String,Integer> ();//declaration of hashmap hm with String as key and Integer as value
 		
 		try {			
-			Scanner scan =new Scanner(f);
+			Scanner scan =new Scanner(f);//opened a scanner on file f
 			
-			while(scan.hasNext()) {
+			while(scan.hasNext()) {//while scanner returns true
 			
-				String next=scan.next();
+				String next=scan.next();//token is returned as String
 				
-				if(!hm.containsKey(next)) {
-					hm.put(next,1);
+				if(!hm.containsKey(next)) {//checks if the hashmap already contains the String
+					hm.put(next,1);//if hashmap dosent contain the key it stores it n the map and gives it "1" as value.
 				}
 				else {
-					hm.put(next,hm.get(next)+1);	
+					hm.put(next,hm.get(next)+1);	//get returns the value of the key 
+													//and the word is replaced with the original word with is original value being incremented
 				}
 			}				
 		} catch (Exception e) {
@@ -32,10 +33,10 @@ public class WordCount {
 		}
 		
 		System.out.println("total words" + hm.size());
-		for (String  words : hm.keySet()) {
+		for (String  words : hm.keySet()) {//iterates over the keyset and stores all the keys in words
 			
-			int count=hm.get(words);
-			System.out.println(count +"\t"+ words);
+			int count=hm.get(words);//get returns the value of each word
+			System.out.println(count +"\t"+ words);//prints count of each word
 		}
 		
 	}	
