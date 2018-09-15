@@ -26,16 +26,7 @@ The throws keyword appears at the end of a method's signature.
 
 */
 public class Custom_Exceptions  {
-	/*
-	public void number(int no) throws CheckedExceptions {//declaration
-		if(no<100)
-		{
-			throw new CheckedExceptions("enter a valid number");
-		}
-		else {
-			System.out.println("number is valid no exception is thrown");
-		}
-		*/
+	
 	public int dividebyzero(int no) throws UncheckedExceptions
 	{
 		return no/0;
@@ -43,15 +34,7 @@ public class Custom_Exceptions  {
 	}
 
 	public static void main(String[] args) {
-		/*
-		Custom_Exceptions c=new Custom_Exceptions();
-		try {
-			c.number(12);
-		}
-		catch (Exception e) {
-			System.out.println("exception :"+ e);
-		}
-		*/
+		
 		try {
 			Custom_Exceptions c=new Custom_Exceptions();
 			c.dividebyzero(12);
