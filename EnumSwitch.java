@@ -49,7 +49,7 @@ public class EnumSwitch {
 				System.out.println("you have not choosen any option");
 		}
 		*/
-		
+		//SWITCH WITH INT
 		int tyresno = 4;
 		String vehicle;
 		switch (tyresno) {
